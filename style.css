@@ -1,0 +1,169 @@
+:root {
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+}
+
+@font-face {
+  font-family: Inter;
+  src: url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 700;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+}
+
+@font-face {
+  font-family: Inter;
+  font-weight: 800;
+  src: url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: InterRegular, sans-serif;
+}
+p {
+  color: var(--Dark-grayish-blue);
+  font-size: 15px;
+}
+
+@media (min-width: 1440px) {
+  main {
+    margin: auto;
+    width: 1440px;
+    padding: 4rem;
+  }
+  nav,
+  .navbar {
+    display: flex;
+  }
+  nav {
+    align-items: center;
+    justify-content: space-between;
+  }
+  .navbar {
+    gap: 3.5rem;
+  }
+  .navbar .navItem {
+    cursor: pointer;
+  }
+  .navbar .navItem:hover {
+    color: var(--Soft-red);
+  }
+  .mainContentGrid {
+    display: grid;
+    gap: 1.8rem;
+    margin: 2rem 0;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .mainContentGrid img {
+    width: 100%;
+    grid-column: 1/3;
+  }
+  .mainContentGrid > h1 {
+    font-size: 4rem;
+    grid-row: 2/3;
+    width: 80%;
+    color: var(--Very-dark-blue);
+  }
+  .mainContentGrid .contentTile {
+    grid-row: 2/3;
+    display: flex;
+    width: 90%;
+    line-height: 1.6rem;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .mainContentGrid .button {
+    width: 70%;
+    cursor: pointer;
+    color: var(--Off-white);
+    padding: 1rem;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background-color: var(--Soft-red);
+    text-align: center;
+  }
+  .mainContentGrid .button:hover {
+    background-color: var(--Very-dark-blue);
+  }
+  .mainContentGrid aside {
+    grid-column: 3/4;
+    grid-row: 1/3;
+    background-color: var(--Very-dark-blue);
+    padding: 3rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .mainContentGrid aside h1 {
+    color: var(--Soft-orange);
+    font-size: 2.8rem;
+  }
+  .mainContentGrid aside h2 {
+    color: var(--Off-white);
+    padding: 1rem 0;
+    cursor: pointer;
+  }
+  .mainContentGrid aside h2:hover {
+    color: var(--Soft-orange);
+  }
+  .mainContentGrid aside .listTile {
+    padding: 1rem 0;
+  }
+  .lineBreaker {
+    height: 1px;
+    background-color: var(--Grayish-blue);
+  }
+
+  .moreNewsContent {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+  }
+  .newsTile {
+    display: grid;
+    width: 30vw;
+    grid-template-columns: 35% 65%;
+  }
+  .newsTile h1 {
+    color: var(--Grayish-blue);
+  }
+  .newsTile h2 {
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: var(--Very-dark-blue);
+  }
+  .newsTile h2:hover {
+    color: var(--Soft-red);
+  }
+  .newsTile img {
+    height: 60%;
+    align-self: center;
+  }
+  .newTileDetails {
+    align-self: flex-start;
+    /* justify-content: flex-start; */
+  }
+  .newsTile .newTileDetails {
+    align-self: center;
+    height: 55%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
