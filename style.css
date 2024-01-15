@@ -164,6 +164,10 @@ h2 {
     flex-direction: column;
     justify-content: space-between;
   }
+
+  .sideMenu {
+    display: none;
+  }
 }
 
 @media (min-width: 370px) and (max-width: 600px) {
@@ -171,6 +175,42 @@ h2 {
     margin: auto;
     width: 375px;
     padding: 2rem 1rem;
+    position: relative;
+  }
+  .shadowBG {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .sideMenu {
+    display: none;
+    z-index: 10;
+    background-color: var(--Off-white);
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 70vw;
+    height: 100vh;
+    color: var(--Very-dark-blue);
+    font-size: 1.8rem;
+  }
+  .closeBtn {
+    position: absolute;
+    top: 2.5rem;
+    right: 2.5rem;
+  }
+  .sideMenuNav {
+    position: absolute;
+    top: 20vh;
+    left: 20px;
+    font-weight: 400;
+  }
+  .navItem {
+    margin: 1.5rem 0;
   }
   nav {
     display: flex;
